@@ -17,5 +17,6 @@ export interface Order {
   id?: number
   name: string
   description: string
+  allergies?: string
   created_at?: string
 }

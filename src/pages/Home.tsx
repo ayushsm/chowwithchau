@@ -9,13 +9,13 @@ function Home() {
   const [showSuccess, setShowSuccess] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmitOrder = async (name: string, description: string) => {
+  const handleSubmitOrder = async (name: string, description: string, allergies: string) => {
     setIsSubmitting(true)
 
     try {
       const { data, error } = await supabase
         .from('orders')
-        .insert([{ name, description }])
+        .insert([{ name, description, allergies: allergies || null }])
         .select()
 
       if (error) {

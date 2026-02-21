@@ -88,6 +88,11 @@ function Admin() {
                   <strong>Customer:</strong> {order.name}
                 </div>
                 <div className="order-description">{order.description}</div>
+                {order.allergies && (
+                  <div className="order-allergies">
+                    <strong>Allergies/Dietary Restrictions:</strong> {order.allergies}
+                  </div>
+                )}
               </div>
             ))}
           </div>

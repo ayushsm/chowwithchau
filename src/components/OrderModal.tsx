@@ -4,13 +4,14 @@ import './OrderModal.css'
 interface OrderModalProps {
   isOpen: boolean
   onClose: () => void
-  onSubmit: (name: string, description: string) => void | Promise<void>
+  onSubmit: (name: string, description: string, allergies: string) => void | Promise<void>
   isSubmitting?: boolean
 }
 
 function OrderModal({ isOpen, onClose, onSubmit, isSubmitting = false }: OrderModalProps) {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
+  const [allergies, setAllergies] = useState('')
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -31,9 +32,10 @@ function OrderModal({ isOpen, onClose, onSubmit, isSubmitting = false }: OrderMo
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (name.trim() && description.trim() && !isSubmitting) {
-      await onSubmit(name, description)
+      await onSubmit(name, description, allergies)
       setName('')
       setDescription('')
+      setAllergies('')
     }
   }
 
@@ -72,6 +74,16 @@ function OrderModal({ isOpen, onClose, onSubmit, isSubmitting = false }: OrderMo
               rows={6}
               placeholder="Tell us what you'd like to order..."
               required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="allergies">Allergies or Dietary Restrictions</label>
+            <textarea
+              id="allergies"
+              value={allergies}
+              onChange={(e) => setAllergies(e.target.value)}
+              rows={3}
+              placeholder="Let us know about any allergies or dietary restrictions..."
             />
           </div>
           <button type="submit" className="submit-button" disabled={isSubmitting}>
