@@ -1,0 +1,148 @@
+.admin-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7E8C69 0%, #F6B0BB 100%);
+  padding: 20px;
+}
+
+.admin-header {
+  background-color: #ECE0DA;
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+  color: #7E8C69;
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: none;
+}
+
+.admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-email {
+  color: #7E8C69;
+  font-size: 0.9rem;
+}
+
+.signout-button {
+  background-color: #F6B0BB;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.signout-button:hover {
+  background-color: #F1C8CB;
+  transform: translateY(-2px);
+}
+
+.admin-content {
+  background-color: #ECE0DA;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-content h2 {
+  color: #7E8C69;
+  margin-bottom: 25px;
+  text-shadow: none;
+}
+
+.loading,
+.no-orders {
+  text-align: center;
+  padding: 40px;
+  color: #7E8C69;
+  font-size: 1.1rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #7E8C69;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F1C8CB;
+}
+
+.order-id {
+  font-weight: 600;
+  color: #7E8C69;
+  font-size: 0.9rem;
+}
+
+.order-date {
+  color: #9CAD8C;
+  font-size: 0.85rem;
+}
+
+.order-name {
+  color: #7E8C69;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.order-name strong {
+  color: #7E8C69;
+}
+
+.order-description {
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .admin-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
