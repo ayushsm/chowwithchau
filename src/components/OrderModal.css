@@ -17,9 +17,9 @@
 .modal-content {
   background-color: #ECE0DA;
   margin: 10% auto;
-  padding: 40px;
+  padding: 50px;
   border-radius: 20px;
-  max-width: 500px;
+  max-width: 650px;
   width: 90%;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   animation: slideIn 0.3s;
@@ -39,7 +39,7 @@
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   line-height: 20px;
   cursor: pointer;
@@ -53,28 +53,29 @@
 h2 {
   color: #7E8C69;
   margin-bottom: 30px;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: left;
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #7E8C69;
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
 input[type="text"],
 textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: 2px solid #F1C8CB;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: inherit;
   transition: border-color 0.3s;
   background-color: white;
@@ -99,8 +100,8 @@ textarea::placeholder {
   background: linear-gradient(135deg, #7E8C69 0%, #9CAD8C 100%);
   color: white;
   border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
+  padding: 15px 35px;
+  font-size: 1.2rem;
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
