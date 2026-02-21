@@ -66,14 +66,14 @@ label {
   margin-bottom: 10px;
   color: #7E8C69;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 input[type="text"],
 textarea {
   width: 100%;
   padding: 14px;
-  border: 2px solid #F1C8CB;
+  border: 2px solid #F6B0BB;
   border-radius: 10px;
   font-size: 1.1rem;
   font-family: inherit;
@@ -88,7 +88,7 @@ textarea {
 input[type="text"]:focus,
 textarea:focus {
   outline: none;
-  border-color: #7E8C69;
+  border-color: #D4C4BC;
 }
 
 input[type="text"]::placeholder,

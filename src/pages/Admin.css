@@ -93,6 +93,16 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.order-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.order-details {
+  flex: 1;
+}
+
 .order-header {
   display: flex;
   justify-content: space-between;
@@ -130,18 +140,66 @@
   margin-bottom: 10px;
 }
 
-.order-allergies {
+.order-allergies-label {
   color: #7E8C69;
   font-size: 0.95rem;
-  line-height: 1.6;
-  white-space: pre-wrap;
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #F1C8CB;
+  margin-bottom: 5px;
 }
 
-.order-allergies strong {
+.order-allergies-label strong {
   color: #7E8C69;
+}
+
+.order-allergies-content {
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+}
+
+.order-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: center;
+}
+
+.complete-button,
+.cancel-button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Poppin', sans-serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.complete-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.complete-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #da190b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -159,5 +217,22 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
+  }
+
+  .order-content {
+    flex-direction: column;
+  }
+
+  .order-actions {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #F1C8CB;
+  }
+
+  .complete-button,
+  .cancel-button {
+    flex: 1;
   }
 }

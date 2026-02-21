@@ -15,7 +15,7 @@ function Home() {
     try {
       const { data, error } = await supabase
         .from('orders')
-        .insert([{ name, description, allergies: allergies || null }])
+        .insert([{ name, description, allergies: allergies || null, status: 'Placed' }])
         .select()
 
       if (error) {
