@@ -90,6 +90,11 @@ textarea:focus {
   border-color: #7E8C69;
 }
 
+input[type="text"]::placeholder,
+textarea::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
 .submit-button {
   background: linear-gradient(135deg, #7E8C69 0%, #9CAD8C 100%);
   color: white;

@@ -42,7 +42,11 @@ function Home() {
 
   return (
     <div className="container">
-      <h1>Chow with Chau</h1>
+      <h1>
+        <span className="big-word">Chow</span>{' '}
+        <span className="small-word">with</span>{' '}
+        <span className="big-word">Chau</span>
+      </h1>
       <p className="subtitle">Order your custom baked goods</p>
 
       <button
