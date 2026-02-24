@@ -1,0 +1,31 @@
+.analytics-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.analytics-card h3 {
+  color: #8B9072;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.chart-container {
+  margin-top: 10px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+  color: #A49783;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    overflow-x: auto;
+  }
+}
